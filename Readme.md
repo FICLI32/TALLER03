@@ -1,4 +1,4 @@
-Desarrollador: FIdel Barriga 
+Desarrollador: Fidel Barriga 
 
 
 Se indetifican las clases:
@@ -8,10 +8,16 @@ Se indetifican las clases:
 * Club
 * Cancha
 * Equipo
+* Deporte
 
 
 Las relaciones son:
 
 * Deportista-asociacion-Equipo
-* Cancha-agregacion-Partido
+* Deportista-agregacion-Deporte
+* Partido-composicion-Cancha
 * Entrenador-composicion-Equipo
+* Entrenador-composicion-Deporte
+* Partido-composicion-Equipo
+* Cancha-compisicion-Club
+
