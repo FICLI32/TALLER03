@@ -40,7 +40,12 @@ public class Cancha {
 	}
 
 	public void agregarPartido(Partido partido) {
-		partidos.add(partido);
+		if (validarPartido(partido)){
+			System.out.println("ya hay un partido en esa fecha");
+		}else{
+			partidos.add(partido);
+			System.out.println("resultado: "+ partido.getResultado()+"equipos: " + partido.getEquipo()+ "-" + partido.getEquipoRival()+ "cancha: " + partido.getCancha()  );
+		}
 	}
 
 	public void mostrarPartidos() {
@@ -49,4 +54,15 @@ public class Cancha {
 			System.out.println("partido: " + partido);
 		}
 	}
+
+	public boolean validarPartido(Partido partido){
+		for(Partido p : partidos){
+			if (p.getFechaPartido().equals(partido.getFechaPartido())){
+				return false;
+			}
+		}
+		return true;
+	}
+
+
 }

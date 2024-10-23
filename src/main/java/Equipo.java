@@ -12,7 +12,6 @@ public class Equipo {
 		this.deporte = deporte;
 	}
 
-
 	public String getNombreEquipo() {
 		return this.nombreEquipo;
 	}
@@ -22,18 +21,10 @@ public class Equipo {
 	}
 
 	public void añadirDeportista(Deportista deportista) {
-		throw new UnsupportedOperationException();
+		deportistas.add(deportista);
 	}
 
 	public void eliminarDeportista(Deportista deportista) {
-		throw new UnsupportedOperationException();
-	}
-
-	public void añadirEntrenador(Entrenador entrenador) {
-		throw new UnsupportedOperationException();
-	}
-
-	public void eliminarEntrenador(Entrenador entrenador) {
-		throw new UnsupportedOperationException();
+		deportistas.remove(deportista);
 	}
 }
